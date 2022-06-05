@@ -16,7 +16,7 @@ const url1 = process.env.REACT_APP_API + "/Allproperties";
 // });
 
 function Tablecontent({ userEmail, userName, token }) {
-  
+
   console.log(userEmail, userName);
   const btnref = useRef({});
   const navigate = useNavigate();
@@ -102,7 +102,7 @@ function Tablecontent({ userEmail, userName, token }) {
   //
   //
   //
-  if(!token){
+  if (!token) {
     navigate("/")
   }
   return (
@@ -142,8 +142,9 @@ function Tablecontent({ userEmail, userName, token }) {
         </tr>
         {items.length > 0 ? (
           items.map((item, i) => (
+
             <tr key={i}>
-              <td>{item.PPDID}</td>
+              <td>PPID{item.PPDID.slice(3, 9)}</td>
               <td>
                 <img
                   style={{ margin: "10px 10px 0px 20px" }}
@@ -163,7 +164,7 @@ function Tablecontent({ userEmail, userName, token }) {
                     borderRadius: "10px",
                     border: "1px solid #eceaea",
                     color: "#416899",
-                    cursor:"pointer"
+                    cursor: "pointer"
                   }}
                   key={i}
                   ref={(node) => {

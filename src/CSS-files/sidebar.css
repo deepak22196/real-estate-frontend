@@ -1,0 +1,43 @@
+.sidebar {
+  /* height: 100%; */
+  width: 23vw;
+  background-color: rgb(216, 248, 237);
+}
+.sidebarlist {
+  height: auto;
+  width: 100%;
+  margin-left: 20px;
+}
+.sidebarlist .row {
+  width: 70%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.row #icon {
+  padding-left: 10px;
+}
+div#title {
+  padding: 12px 0px 0px 24px;
+}
+.logo1 {
+  height: 75px;
+  width: 44px;
+  padding: 46px 0px 0px 107px;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 25px;
+  margin-bottom: 40px;
+}
+/* .username {
+  display: flex;
+  float: right;
+  margin-top: -30px;
+} */
+
+.userid {
+  height: 25px;
+  width: 165px;
+  margin: 55px 0px 0px 31px;
+}

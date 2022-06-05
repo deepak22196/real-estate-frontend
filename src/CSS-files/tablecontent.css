@@ -1,0 +1,34 @@
+.tablecontent {
+  margin-left: 5%;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  color: #284783;
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 20px;
+  line-height: 25px;
+  background-color: white;
+}
+th,
+td {
+  text-align: center;
+  padding: 23px;
+}
+
+tr {
+  border-bottom: 1px solid red;
+}
+
+.no-res {
+  color: red;
+  width: 100%;
+  margin-left: 150%;
+  font-size: 30px;
+  font-weight: 600;
+}

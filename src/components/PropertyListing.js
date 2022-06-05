@@ -11,9 +11,16 @@ import TableHeader from "./TableHeader.js";
 import TableContent from "./TableContent.js";
 import { useNavigate, useParams } from "react-router-dom";
 
+
 const PropertyListing = ({ token, setToken }) => {
+  const navigate= useNavigate()
+  
   const { userEmail, userName } = useParams();
   console.log(userEmail, userName);
+  if(!token){
+    navigate("/")
+    
+  }
   return (
     <div className="App">
       <Sidebar />

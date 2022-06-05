@@ -1,7 +1,7 @@
 .sidebar {
   /* height: 100%; */
   width: 23vw;
-  background-color: rgb(216, 248, 237);
+  background-color: #E1F9F4;
 }
 .sidebarlist {
   height: auto;
@@ -19,7 +19,7 @@
   padding-left: 10px;
 }
 div#title {
-  padding: 12px 0px 0px 24px;
+  padding: 2px 0px 0px 24px;
 }
 .logo1 {
   height: 75px;
@@ -36,8 +36,3 @@ div#title {
   margin-top: -30px;
 } */
 
-.userid {
-  height: 25px;
-  width: 165px;
-  margin: 55px 0px 0px 31px;
-}

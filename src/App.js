@@ -13,7 +13,9 @@ import Search from "./components/search.js";
 import NotFound from "./components/NotFound.js";
 import React, { useState } from "react";
 
+
 function App() {
+
   const [token, setToken] = useState(localStorage.getItem("token"));
   return (
     <div className="App">
@@ -21,22 +23,37 @@ function App() {
         <Routes>
           <Route path="/" element={<Signin setToken={setToken} />}></Route>
           <Route path="/Signup" element={<Signup />}></Route>
-          <Route
+          {token ? <Route
             path="/AllProperties/:userEmail/:userName"
             element={<PropertyListing token={token} setToken={setToken} />}
-          ></Route>
-          <Route
-            path="/form/:userEmail/:userName"
-            element={<FormParent token={token} setToken={setToken} />}
-          ></Route>
-          <Route
+          ></Route> : (
+            <Route
+              path="/AllProperties/:userEmail/:userName"
+              element={<Signin setToken={setToken} />}
+            ></Route>
+          )}
+          {token ?
+            <Route
+              path="/form/:userEmail/:userName"
+              element={<FormParent token={token} setToken={setToken} />}
+            ></Route> : <Route
+              path="/form/:userEmail/:userName"
+              element={<Signin setToken={setToken} />}
+            ></Route>}
+          {token ? <Route
             path="/form/:editID/:userEmail/:userName"
             element={<FormParent token={token} setToken={setToken} />}
-          ></Route>
-          <Route
+          ></Route> : <Route
+            path="/form/:editID/:userEmail/:userName"
+            element={<Signin setToken={setToken} />}
+          ></Route>}
+          {token ? <Route
             path="/form/:editID/:userEmail/:userName"
             element={<FormParent token={token} setToken={setToken} />}
-          ></Route>
+          ></Route> : <Route
+            path="/form/:editID/:userEmail/:userName"
+            element={<Signin setToken={setToken} />}
+          ></Route>}
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </BrowserRouter>

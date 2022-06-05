@@ -12,13 +12,12 @@ function Header({ userEmail, userName, setToken }) {
     if (userEmail[i] == "@") {
       break;
     }
-    if (i % 2 == 0) {
-      str += userEmail[i];
-    } else {
-      str += "*";
+    else{
+      str+=userEmail[i];
     }
+    
   }
-  str = str + "****@gmail.com";
+  
   const navigate = useNavigate();
   const handleLogout = async () => {
     console.log("logging out");
@@ -32,13 +31,9 @@ function Header({ userEmail, userName, setToken }) {
 
   return (
     <div className="header">
-      <div className="123">
-        <div className="userid">
-          <span className="userid">
-            <h5>UserID:</h5>
-            {str}
-          </span>
-        </div>
+      <div className="userid">
+          <div className="12">USER ID :</div>
+          <div className="1">{str} </div>
       </div>
       <div className="username" placeholder="username">
         <div>

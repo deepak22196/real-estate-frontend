@@ -16,6 +16,7 @@ const url1 = process.env.REACT_APP_API + "/Allproperties";
 // });
 
 function Tablecontent({ userEmail, userName, token }) {
+  
   console.log(userEmail, userName);
   const btnref = useRef({});
   const navigate = useNavigate();
@@ -101,7 +102,9 @@ function Tablecontent({ userEmail, userName, token }) {
   //
   //
   //
-
+  if(!token){
+    navigate("/")
+  }
   return (
     <div className="tablecontent">
       <form class="search-form">
@@ -125,7 +128,7 @@ function Tablecontent({ userEmail, userName, token }) {
           + Add Property
         </button>
       </form>
-      <tbody style={{ backgroundColor: "white" }}>
+      <tbody id="tbody">
         <tr>
           <th>PPDID</th>
           <th>Image</th>
@@ -160,6 +163,7 @@ function Tablecontent({ userEmail, userName, token }) {
                     borderRadius: "10px",
                     border: "1px solid #eceaea",
                     color: "#416899",
+                    cursor:"pointer"
                   }}
                   key={i}
                   ref={(node) => {
@@ -168,7 +172,7 @@ function Tablecontent({ userEmail, userName, token }) {
                   onClick={() => {
                     btnref.current[i].textContent == "Unsold"
                       ? (btnref.current[i].textContent = "Sold")
-                      : (btnref.current[i].textContent = "Unsold");
+                      : (btnref.current[i].textContent = "Sold");
                     handleClick(item._id);
                   }}
                 >

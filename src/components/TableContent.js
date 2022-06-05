@@ -6,6 +6,10 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { log } from "../App";
 const url1 = process.env.REACT_APP_API + "/Allproperties";
+import blank_image from "../images/Icons/blank-image.png";
+import eye from "../images/Icons/eye.png";
+import edit from "../images/Icons/edit.png";
+import search from "../images/Icons/search-icon.png";
 
 // axios.interceptors.request.use((config) => {
 //   config.headers.authorization = `Bearer ${token}`;
@@ -109,11 +113,7 @@ function Tablecontent({ userEmail, userName, token }) {
           onChange={searchHandle}
         />
 
-        <img
-          style={{ margin: "-8px -50px" }}
-          src="/icons/search-icon.png"
-          alt="no-img"
-        />
+        <img style={{ margin: "-8px -50px" }} src={search} alt="no-img" />
 
         <button
           className=" add-user"
@@ -144,7 +144,7 @@ function Tablecontent({ userEmail, userName, token }) {
               <td>
                 <img
                   style={{ margin: "10px 10px 0px 20px" }}
-                  src="/icons/blank-image.png"
+                  src={blank_image}
                   alt="no image"
                 />
               </td>
@@ -183,7 +183,7 @@ function Tablecontent({ userEmail, userName, token }) {
                     width: "20px",
                     cursor: "pointer",
                   }}
-                  src="/icons/eye.png"
+                  src={eye}
                   alt="no image"
                 />
                 <img
@@ -191,7 +191,7 @@ function Tablecontent({ userEmail, userName, token }) {
                     handleEdit(item.PPDID);
                   }}
                   style={{ margin: "5px 10px 0px 20px", cursor: "pointer" }}
-                  src="/icons/edit.png"
+                  src={edit}
                   alt="no image"
                 />
               </td>

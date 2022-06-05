@@ -4,7 +4,7 @@ import { useState, useContext } from "react";
 import "../CSS-files/signin.css";
 import axios from "axios";
 import { log } from "../App";
-import eye from "../images/Icons/eye-slash.png";
+import eye_slash from "../images/Icons/eye-slash.png";
 const url = process.env.REACT_APP_API;
 
 function Signin({ setToken }) {
@@ -67,7 +67,7 @@ function Signin({ setToken }) {
               setShowPassword(!showPassword);
             }}
           >
-            <img src={eye} alt="no image" />
+            <img src={eye_slash} alt="no image" />
           </span>
 
           <button type="submit" className="submit-button">

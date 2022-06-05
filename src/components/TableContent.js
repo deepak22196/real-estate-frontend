@@ -3,13 +3,13 @@ import { useState, useEffect, useContext, useRef } from "react";
 import "../CSS-files/tablecontent.css";
 import "../CSS-files/search.css";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
-import { log } from "../App";
-const url1 = process.env.REACT_APP_API + "/Allproperties";
 import blank_image from "../images/Icons/blank-image.png";
 import eye from "../images/Icons/eye.png";
 import edit from "../images/Icons/edit.png";
 import search from "../images/Icons/search-icon.png";
+import axios from "axios";
+import { log } from "../App";
+const url1 = process.env.REACT_APP_API + "/Allproperties";
 
 // axios.interceptors.request.use((config) => {
 //   config.headers.authorization = `Bearer ${token}`;
